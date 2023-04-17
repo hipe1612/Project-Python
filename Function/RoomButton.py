@@ -255,8 +255,11 @@ def room_press(window, width, height, room_list, resevation_list):
     Label(room_subwin, text='  - ID must be " R-xxx " ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=100, height=30)
     Label(room_subwin, text='  - Type must be "Luxury" or "Gold" or  ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=130, height=30)
     Label(room_subwin, text='  "Normal" ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=160, height=30)
-    Label(room_subwin, text='  - Price must be " xxx " ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=190, height=30)
-    
+    Label(room_subwin, text='  - Price for each kind of Room (VND) : ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=190, height=30)
+    Label(room_subwin, text='    + Luxury : 3000000  ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=220, height=30)
+    Label(room_subwin, text='    + Gold   : 2000000 ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=250, height=30)
+    Label(room_subwin, text='    + Normal : 1000000  ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=280, height=30)
+
     # Entry Headers
     Label(entry_frame, bg='#5E95FF', fg='white', text='   ID   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=0)
     Label(entry_frame, bg='#5E95FF', fg='white', text='   Type   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=1)
