@@ -341,12 +341,12 @@ def reservation_press(window, width, height, reservation_list, guest_list, room_
 
     #=========================================================================================
     
-    # reservation Control
+    # Main Content : Reservation Management
     Label(reservation_subwin, bg='#5E95FF', fg='white', text='RESERVATION MANAGEMENT', font=("Montserrat Bold", 20, 'bold')).place(x=50, y=25, width=width/2 + 670, height=50)
     entry_frame = Frame(reservation_subwin, bg='#5E95FF')
     entry_frame.place(x=50, y=100 , width=width/2, height=height/2 - 100)
     
-
+    # Condition Warning
     subentry_frame = Frame(reservation_subwin, bg='#5E95FF')
     subentry_frame.place(x=width/2+300, y=100 , width= 420, height=height/2 - 100)
     Label(reservation_subwin, text=' - ID must be "RS-xxx" ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=100, height=30)
@@ -354,7 +354,7 @@ def reservation_press(window, width, height, reservation_list, guest_list, room_
     Label(reservation_subwin, text=' - Room ID must be "R-xxx" ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=160, height=30)
     Label(reservation_subwin, text=' - Checkin/Checkout must be "dd/mm/yyyy" ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=190, height=30)
 
-
+    # Entry Headers
     Label(entry_frame, bg='#5E95FF', fg='white', text='   ID   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=0)
     Label(entry_frame, bg='#5E95FF', fg='white', text='   GuestID   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=1)
     Label(entry_frame, bg='#5E95FF', fg='white', text='   RoomID   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=2)
@@ -392,7 +392,7 @@ def reservation_press(window, width, height, reservation_list, guest_list, room_
     clear_button.place(x=width/2 + 100, y=240, width=150, height=50)
 
 
-    # button for data
+    # Button to manage data in treeview
 
     remove_reservation_button = Button(reservation_subwin, text='REMOVE SELECTED',anchor='center',font=("Montserrat Bold", 11,'bold'),bg='red', fg='white', relief='ridge',
         activebackground='blue', activeforeground='white', command=lambda: reservation_remove(reservation_list, reservation_tree))

@@ -32,6 +32,7 @@ def clear_entry(entry_frame, id_entry, name_entry, gend_entry, dob_entry, phone_
     selected_staff = -1
     
 def staff_add(staff_list, staff_tree, entry_frame, id_entry, name_entry, gend_entry, dob_entry, phone_entry, email_entry, address_entry, salary_entry, position_entry):
+    # Delete all Warnings
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                  ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=0,sticky='w')
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
@@ -42,6 +43,7 @@ def staff_add(staff_list, staff_tree, entry_frame, id_entry, name_entry, gend_en
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=7,sticky='w')
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=8,sticky='w')
     
+    # Get Entry
     id = id_entry.get()
     name = name_entry.get()
     gend = gend_entry.get()
@@ -379,12 +381,12 @@ def staff_press(window, width, height, staff_list):
 
     #=========================================================================================
     
-    # staff Control
+    # Main content : Staff Management
     Label(staff_subwin, bg='#5E95FF', fg='white', text='STAFF MANAGEMENT', font=("Montserrat Bold", 20, 'bold')).place(x=50, y=25, width=width/2 + 670, height=50)
     entry_frame = Frame(staff_subwin, bg='#5E95FF')
     entry_frame.place(x=50, y=100 , width=width/2, height=height/2 - 100)
     
-
+    # Condition Warning
     subentry_frame = Frame(staff_subwin, bg='#5E95FF')
     subentry_frame.place(x=width/2+300, y=100 , width= 420, height=height/2 - 100)
     Label(staff_subwin, text='  - ID must be " S-xxx " ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=100, height=30)
@@ -393,9 +395,7 @@ def staff_press(window, width, height, staff_list):
     Label(staff_subwin, text='  - Phone must be ten numbers ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=190, height=30)
     Label(staff_subwin, text='  - Salary must be a number ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=220, height=30)
 
-
-
-    # Column 2: Atribute
+    # Entry Headers
     Label(entry_frame, bg='#5E95FF', fg='white', text='   ID   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=0)
     Label(entry_frame, bg='#5E95FF', fg='white', text='   Name   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=1)
     Label(entry_frame, bg='#5E95FF', fg='white', text='   Gender   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=2)
@@ -448,8 +448,7 @@ def staff_press(window, width, height, staff_list):
         activebackground='dark blue', activeforeground='white', command=lambda: clear_entry(entry_frame, id_entry, name_entry, gend_entry, dob_entry, phone_entry, email_entry, address_entry, salary_entry, position_entry))
     clear_button.place(x=width/2 + 100, y=240, width=150, height=50)
 
-
-    # button for data
+    # Button to manage data in treeview
 
     remove_staff_button = Button(staff_subwin, text='REMOVE SELECTED',anchor='center',font=("Montserrat Bold", 11,'bold'),bg='red', fg='white', relief='ridge',
         activebackground='blue', activeforeground='white', command=lambda: staff_remove(staff_list, staff_tree))
