@@ -1,2 +1,2 @@
 # Project-Python
-Hotel Information Management System
+hotel information management system
