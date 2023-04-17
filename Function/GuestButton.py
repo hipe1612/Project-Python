@@ -28,6 +28,7 @@ def clear_entry(entry_frame, id_entry, name_entry, gend_entry, dob_entry, phone_
     selected_guest = -1
     
 def guest_add(guests_list, guest_tree, entry_frame, id_entry, name_entry, gend_entry, dob_entry, phone_entry, email_entry, address_entry):
+    # Delete all Warnings
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                  ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=0,sticky='w')
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
@@ -36,6 +37,7 @@ def guest_add(guests_list, guest_tree, entry_frame, id_entry, name_entry, gend_e
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=5,sticky='w')
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=6,sticky='w')
     
+    # Get Entry boxes
     id = id_entry.get()
     name = name_entry.get()
     gend = gend_entry.get()
@@ -174,6 +176,7 @@ def guest_select(guests_list, guest_tree, entry_frame, id_entry, name_entry, gen
 def guest_update(guests_list, guest_tree, entry_frame, id_entry, name_entry, gend_entry, dob_entry, phone_entry, email_entry, address_entry):
     global selected_guest
     if selected_guest != -1:
+        # Delete all Warnings
         Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                  ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=0,sticky='w')
         Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
         Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
@@ -182,6 +185,7 @@ def guest_update(guests_list, guest_tree, entry_frame, id_entry, name_entry, gen
         Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=5,sticky='w')
         Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=6,sticky='w')
 
+        # Get Updated Info
         id = id_entry.get()
         name = name_entry.get()
         gend = gend_entry.get()
@@ -273,7 +277,7 @@ def guest_update(guests_list, guest_tree, entry_frame, id_entry, name_entry, gen
             email_entry.delete(0, END)
             address_entry.delete(0, END)
 
-
+#=========================================================================================
 def guest_press(window, width, height, guests_list):
     global selected_guest
     selected_guest = -1
@@ -334,12 +338,12 @@ def guest_press(window, width, height, guests_list):
 
     #=========================================================================================
     
-    # guest Control
+    # Main Content : Guest Management
     Label(guest_subwin, bg='#5E95FF', fg='white', text='GUEST MANAGEMENT', font=("Montserrat Bold", 20, 'bold')).place(x=50, y=25, width=width/2 + 670, height=50)
     entry_frame = Frame(guest_subwin, bg='#5E95FF')
     entry_frame.place(x=50, y=100 , width=width/2, height=height/2 - 100)
     
-
+    # Condition Warning
     subentry_frame = Frame(guest_subwin, bg='#5E95FF')
     subentry_frame.place(x=width/2+300, y=100 , width= 420, height=height/2 - 100)
     Label(guest_subwin, text='  - ID must be " G-xxx " ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=100, height=30)
@@ -347,7 +351,7 @@ def guest_press(window, width, height, guests_list):
     Label(guest_subwin, text='  - Date of Birth must be " dd/mm/yyyy " ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=160, height=30)
     Label(guest_subwin, text='  - Phone must be ten numbers ', anchor='w', bg='#5E95FF', fg='white', font=("Montserrat Bold", 14, 'bold')).place(x=width/2+300, y=190, height=30)
 
-
+    # Entry Headers
     Label(entry_frame, bg='#5E95FF', fg='white', text='   ID   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=0)
     Label(entry_frame, bg='#5E95FF', fg='white', text='   Name   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=1)
     Label(entry_frame, bg='#5E95FF', fg='white', text='   Gender   ', font=("Montserrat Bold", 14, 'bold')).grid(column=2, row=2)
@@ -393,7 +397,7 @@ def guest_press(window, width, height, guests_list):
     clear_button.place(x=width/2 + 100, y=240, width=150, height=50)
 
 
-    # button for data
+    # Button to manage data in treeview
 
     remove_guest_button = Button(guest_subwin, text='REMOVE SELECTED',anchor='center',font=("Montserrat Bold", 11,'bold'),bg='red', fg='white', relief='ridge',
         activebackground='blue', activeforeground='white', command=lambda: guest_remove(guests_list, guest_tree))
