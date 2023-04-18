@@ -10,10 +10,10 @@ import utils
 def clear_entry(entry_frame, id_entry, guestID_entry, roomID_entry, checkin_entry, checkout_entry):
     # Delete all Warnings
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=0,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                            ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                       ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
 
     # Empty Entry boxes
     id_entry.delete(0, END)
@@ -28,10 +28,10 @@ def clear_entry(entry_frame, id_entry, guestID_entry, roomID_entry, checkin_entr
     
 def reservation_add(reservation_list, guest_list, room_list, reservation_tree, entry_frame,id_entry, guestID_entry, roomID_entry, checkin_entry, checkout_entry):
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                     ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=0,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                     ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                     ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                       ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                       ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                       ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                       ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
 
     id = id_entry.get()
     guestID = guestID_entry.get()
@@ -150,10 +150,10 @@ def all_reservation_remove(reservation_tree, reservation_list):
 def reservation_select(reservation_list, reservation_tree, entry_frame,id_entry, guestID_entry, roomID_entry, checkin_entry, checkout_entry):
     # Delete all Warnings
     Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=0,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
-    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                           ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                               ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
+    Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                               ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
 
     
     # Empty Entry boxes
@@ -181,10 +181,10 @@ def reservation_update(reservation_list, guest_list, room_list, reservation_tree
     global selected_reservation
     if selected_reservation != -1:
         Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                            ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=0,sticky='w')
-        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                            ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
-        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                            ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
-        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
-        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
+        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                                 ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=1,sticky='w')
+        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                                                   ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=2,sticky='w')
+        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                               ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=3,sticky='w')
+        Label(entry_frame, bg='#5E95FF', fg='crimson', text='                                               ', font=("Montserrat Bold", 14, 'bold')).grid(column=6,row=4,sticky='w')
 
         id = id_entry.get()
         guestID = guestID_entry.get()
