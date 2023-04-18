@@ -128,7 +128,6 @@ def room_select(room_list,reservation_list, room_tree, entry_frame, id_entry, ty
                     break    
                 else:
                     Label(entry_frame, bg='white', fg='black', text='Available                       ', font=("Montserrat Bold", 9)).grid(column=4,row=4,sticky='w')
-                    break
 
 def room_update(room_list, room_tree, entry_frame, id_entry, type_entry, price_entry):
     global selected_room
